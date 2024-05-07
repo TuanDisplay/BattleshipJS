@@ -14,34 +14,6 @@ var view = {
     }
 }
 
-// const funcGetId = () => {
-//     let Id = "";
-//     document.addEventListener('click', (e) => {
-//         let setScopeId = e.target.closest('.container-id-td');      
-//         if(setScopeId !== null){
-//             let setId = e.target.id;
-//             Id = setId
-//         } 
-//         handleId(Id);
-//     })
-    
-// }
-
-// const handleId = (Id) => {
-//     let numId = Number(Id);
-//     try {
-//         view.displayHit(`${numId}`)
-//     } catch (error) {
-//         console.log("OUT OF SCOPE");
-//     }
-// }
-// funcGetId();
-
-
-
-
-
-
 var model = {
     boardSize: 7,
     numShips: 3,
@@ -59,7 +31,7 @@ var model = {
             if(index >= 0){
                 ship.hits[index] = "hit"
                 view.displayHit(guess)
-                view.displayMessage("HIT")
+                view.displayMessage("HIT!")
                 if(this.isSunk(ship)){
                     view.displayMessage("You sank my battleship!")
                     this.shipSunk++;
@@ -74,7 +46,7 @@ var model = {
 
     isSunk: function(ship){
         for(var i = 0; i < this.shipLength; i++){
-            if(ship.hits[i] = "hit"){
+            if(ship.hits[i] !== "hit"){
                 return false
             }
         }
@@ -85,7 +57,7 @@ var model = {
         var locations;
         for (var i = 0; i < this.numShips; i++){
             do {
-                locations = this.generateShipLocation();
+                locations = this.generateShip();
             }while (this.collision(locations)){
                 this.ships[i].locations = locations;
             }
@@ -93,7 +65,7 @@ var model = {
     },
 
     generateShip : function (){
-        var direction = Math.floor(Math.random()*2);
+        var direction = Math.floor(Math.random() * 2);
         var row, col;
         
         if (direction === 1){
@@ -160,7 +132,7 @@ var controller = {
             this.guesses++;
             var hit = model.fire(location);
             if(hit && model.shipSunk === model.numShips){
-                view.displayMessage("You sank all my battleshipsn, in " + this.guesses + "guesses");
+                view.displayMessage("You sank all my battleship, in " + this.guesses + " guesses");
             }
         }
     }
@@ -176,7 +148,7 @@ function init(){
 }
 
 function handleKeyPress(e){
-    var fireButton = document.getElementById(fireButton);
+    var fireButton = document.getElementById("fireButton");
     if (e.keyCode === 13){
         fireButton.click();
         return false;

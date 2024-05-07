@@ -12,7 +12,7 @@ body {
     width: 90%;
     height: 825px;
     margin: auto;
-    background: url("./images/board1.png") no-repeat;
+    background: url("./images/board.png") no-repeat;
     background-size: cover;
 
     display: flex;
@@ -24,7 +24,7 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
-    color: rgb(83, 175, 19) ;
+    color: red ;
     font-size: 50px;
 }
 table{
@@ -67,32 +67,3 @@ form input {
     background: url(./images/miss.jpg) no-repeat center center;
     background-size: 95px;
 }
-
-/* .container-boat {
-    position: absolute;
-    right: 10px;
-    width: 225px;
-    height: 250px;
-    background-color: #fff;
-}
-
-.boat2,.boat3,.boat4{
-    position: absolute;
-    left: 90px;
-    transform: rotate(-90deg);
-}
-
-.boat2 {
-    top: -50px;
-    left: 85px;
-    
-}
-
-.boat3 {
-    top: 30px;
-}
-
-.boat4 {
-    top: 100px;
-} */
-
