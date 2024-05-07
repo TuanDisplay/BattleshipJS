@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+}
+
+#board {
+    position: relative;
+    width: 90%;
+    height: 825px;
+    margin: auto;
+    background: url("./images/board1.png") no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#messageArea {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: rgb(83, 175, 19) ;
+    font-size: 50px;
+}
+table{
+    position: absolute;
+    border: 0px salmon solid;
+    width: 680px;
+    height: 680px;
+    border-spacing: 0px;
+
+    margin-top: 25px;
+    margin-right: 1.5px;
+}
+
+/* td {
+    width: 90px;
+    height: 90px;
+} */
+
+td:hover {
+    background-color: #fff ;
+}
+form {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 15px;
+    background-color: rgb(83, 175, 19);
+}
+form input {
+    background-color: rgb(152, 207, 113);
+    border-color: rgb(83, 175, 19);
+    font-size: 1em;
+}
+
+.hit {
+    background: url(./images/ship2.png) no-repeat center center;
+    background-size: 95px;
+}
+.miss {
+    background: url(./images/miss.jpg) no-repeat center center;
+    background-size: 95px;
+}
+
+/* .container-boat {
+    position: absolute;
+    right: 10px;
+    width: 225px;
+    height: 250px;
+    background-color: #fff;
+}
+
+.boat2,.boat3,.boat4{
+    position: absolute;
+    left: 90px;
+    transform: rotate(-90deg);
+}
+
+.boat2 {
+    top: -50px;
+    left: 85px;
+    
+}
+
+.boat3 {
+    top: 30px;
+}
+
+.boat4 {
+    top: 100px;
+} */
+
